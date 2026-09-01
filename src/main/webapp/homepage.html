@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: #686767;
+            border: 2px solid black;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-weight: 800;
+            color: white;
+            font-size: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 23px;
+        }
+
+        nav ul li:hover {
+            color: aqua;
+            cursor: pointer;
+        }
+
+        nav ul {
+            gap: 50px;
+        }
+
+
+        .wrapper {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .link_wrapper {
+            position: relative;
+            left: 550px;
+        }
+
+        .redirect {
+            display: block;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            background: #333;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #333;
+            transition: all .35s;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            right: 0;
+            top: 0;
+            z-index: -1;
+            transition: all .35s;
+        }
+
+        .icon svg {
+            width: 30px;
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            transform: rotate(-45deg);
+            fill: #2ecc71;
+            transition: all .35s;
+        }
+
+        .redirect:hover {
+            width: 200px;
+            border: 3px solid #2ecc71;
+            background: transparent;
+            color: #2ecc71;
+        }
+
+        .redirect:hover+.icon {
+            border: 3px solid #2ecc71;
+            right: -25%;
+        }
+
+        img {
+            height: 50px;
+            border-radius: 50%;
+        }
+        .main {
+            background-image: url(https://blogs.ucl.ac.uk/grand-challenges/files/2019/01/Justice-Photo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            bottom: 0;
+            height: px;
+            padding: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCW7DWK_22WqpVnJYuLuwGjPxV-acvHj4oIw&usqp=CAU"
+            alt="">
+        <p id="two">CRIME MANAGEMENT SYSTEM</p>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li class="abouts"><a href="#About1">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="container">
+            <div class="wrapper">
+                <div class="link_wrapper">
+                    <a class="redirect" href="loginandsignup.jsp">Public → </a>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                            <path
+                                d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="link_wrapper" style="top: 70px;">
+                    <a class="redirect" href="signupnew.jsp">Officials → </a>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                            <path
+                                d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="About1">
+        <p>&copy; 2024 Crime Management System</p>
+        <p>All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
